@@ -27,16 +27,10 @@
   <p>좌측상단의 X표시를 이용해 QR스캐너를 다시 실행시킨 다음</p>
   <h1>그 QR코드를 다시 한 번 스캔해보시겠습니까?</h1>
 
-  <script>
-  var checkPageShow = false;
-
-  window.onpageshow = function(event) {
-    checkPageShow = true;
-
-      if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-          document.location.reload();
-      }
-    };
+    <script>
+  window.history.forward(); function noBack(){
+    window.history.forward();
+}
   </script>
 
 </body>
