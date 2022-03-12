@@ -30,6 +30,18 @@
   <h3>이 문장을 읽고 약 5초 후에 [다음]버튼을 눌러주세요.</h3>
 
   <div id='num1'><input type="button" style="width:100pt; height:60pt; font-size:30pt;" value="다음▷" onclick="location.href='index-3.html' " /></div>
+
+  <script>
+  var checkPageShow = false;
+
+  window.onpageshow = function(event) {
+    checkPageShow = true;
+
+      if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+          document.location.reload();
+      }
+    };
+  </script>
     
 </body>
 </html>
